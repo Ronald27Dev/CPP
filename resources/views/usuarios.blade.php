@@ -12,7 +12,10 @@
         <div class="card">
             <div class="card-header">
                 Todos Usuarios Cadastrados
-                <a href="/usuarios/adicionar-usuario" class="btn btn-success btn-sm float-end">Novo Usuario</a>
+                <div class="float-end">
+                    <a href="/usuarios/adicionar-usuario" class="btn btn-success btn-sm">Novo Usuario</a>&nbsp;&nbsp;&nbsp;
+                    <a href="/logout" class="btn btn-danger btn-sm">Sair</a>
+                </div>
             </div>
             @if (Session::has('success'))
                 <span class="alert alert-success p-2">{{Session::get('success')}}</span>
