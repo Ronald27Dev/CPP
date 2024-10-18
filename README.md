@@ -54,7 +54,23 @@ Siga os passos abaixo para rodar o projeto localmente:
     php artisan migrate
     ```
 
-8. **Inicie o servidor de desenvolvimento**:
+8. **Popule o banco de dados com dados de exemplo (Seeder)**:
+
+    Caso deseje popular o banco de dados com dados de exemplo, execute o seguinte comando:
+
+    ```bash
+    php artisan db:seed
+    ```
+
+    Isso irá rodar o `DatabaseSeeder` e criar um usuário de teste com as informações padrão. O seeder está configurado para criar um usuário com os seguintes dados:
+
+    - **Nome**: Test User
+    - **Email**: test@example.com
+    - **Senha**: `123456789`
+
+    Caso queira adicionar mais usuários ou personalizar os dados gerados, edite o arquivo `database/seeders/DatabaseSeeder.php`.
+
+9. **Inicie o servidor de desenvolvimento**:
 
     ```bash
     php artisan serve
