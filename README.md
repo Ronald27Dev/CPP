@@ -10,10 +10,10 @@ Instalar php 8.2 ou superior, composer e mysql 8
 ```
 
 ## Desenvolvedores
-Ronald (https://github.com/Ronald27Dev)
-Lucas 
-Pedro
-Matheus
+Ronald  (https://github.com/Ronald27Dev)
+Lucas   (https://github.com/lmoliiveira)
+Pedro   (https://github.com/pedroazevedoc)
+Matheus (https://github.com/MatheusRamosSilver)
 
 ## License
 
