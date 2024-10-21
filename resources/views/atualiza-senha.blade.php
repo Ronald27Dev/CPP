@@ -31,16 +31,16 @@
 
         .white-panel{
 			background-color: rgba(255,255, 255, 1);
-			height:400px;
+			min-height:500px;
 			/* position:absolute;
 			top:-50px;*/
-			/* width:50%;  */
+			min-width:30%; 
 			right:calc(50% - 50px);
 			transition:.3s ease-in-out;
 			z-index:0;
 			box-shadow: 0 0 15px 9px #00000096;
 		}
-        .login-show input[type="email"], .login-show input[type="password"]{
+        .login-show input[type="password"]{
 			width: 100%;
 			display: block;
 			margin:20px 0;
@@ -71,24 +71,26 @@
 <body>
     <div class="white-panel">
         <div class="login-show">
-            <h2>Recuperar Senha</h2>
-            <p>Enviaremos um email com o link de recuperação para o email informado.</p>
-            <form action="{{ route('forgot') }}" method="POST">
+            <h2>Recuperar Senha</h2><br>
+            <form action="{{route('password.update')}}" method="post">
                 @csrf
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-                @if ($errors->has('email'))
-                    <div class="text-danger">{{ $errors->first('email') }}</div>
-                @endif
-                <button type="submit">Enviar email</button>
-                <a href="{{ route('login') }}">Voltar</a>
+                <input type="hidden" name="email" value="{{$email}}">
+                <input type="hidden" name="token" value="{{$token}}">
+                
+                <label for="password">Nova senha</label>
+                <input type="password" name="password" id=""><br>
+                
+                <label for="password_confirmation">Confirmar nova senha</label>
+                <input type="password" name="password_confirmation" id=""><br>
+                
+                <button type="submit">Atualizar senha</button>
             </form>
         </div>
         @if (Session::has('fail'))
-            <span class="alert alert-danger p-2 text-center">{{ Session::get('fail') }}</span>
+            <span class="alert alert-danger p-2" style="text-align: center">{{Session::get('fail')}}</span>
         @endif
         @if (Session::has('success'))
-            <span class="alert alert-success p-2 text-center">{{ Session::get('success') }}</span>
+            <span class="alert alert-success p-2" style="text-align: center">{{Session::get('success')}}</span>
         @endif
     </div>
 </body>

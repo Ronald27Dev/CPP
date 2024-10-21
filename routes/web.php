@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,9 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'listAll']);
 
-/**
- * Rotas para configurações de usuarios (CRUD)
- */
+//Rotas para configurações de usuarios (CRUD) 
 Route::prefix('usuarios')->group(function () {
     Route::get('/', [UserController::class, 'listAll']);
     Route::get('/adicionar-usuario', [UserController::class, 'formAddUser']);
@@ -23,16 +22,14 @@ Route::prefix('usuarios')->group(function () {
 });
 
 //Rotas de login
-Route::get('/login', [UserController::class, 'loginForm']);
-Route::post('/login', [UserController::class, 'loginAuth'])->name('login');
-// Rota para exibir o formulário de redefinição de senha
-Route::get('resetar-senha/{token}/{email}', [UserController::class, 'showResetPasswordForm'])->name('password.reset');
+Route::prefix('login')->group(function () {
+    Route::get('/', [AuthController::class, 'loginForm']);
+    Route::post('/', [AuthController::class, 'loginAuth'])->name('login');
+    Route::get('/forgot', [AuthController::class, 'forgotPasswordForm']);
+    Route::post('/forgot', [AuthController::class, 'sendResetLink'])->middleware('guest')->name('forgot');
+});
+Route::get('/logout', [AuthController::class, 'logout']);
 
+Route::get('resetar-senha/{token}/{email}', [AuthController::class, 'showResetPasswordForm'])->name('password.reset');
 // Rota para processar a redefinição de senha
-Route::post('resetar-senha', [UserController::class, 'updatePassword'])->name('password.update');
-
-
-Route::get('/login/forgot', [UserController::class, 'forgotPasswordForm']);
-Route::post('/login/forgot', [UserController::class, 'sendResetLink'])->middleware('guest')->name('forgot');
-
-Route::get('/logout', [UserController::class, 'logout']);
+Route::post('resetar-senha', [AuthController::class, 'updatePassword'])->name('password.update');
