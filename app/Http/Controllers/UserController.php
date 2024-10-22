@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
+/**
+ * Controller responsavel pelos dados dos usuarios
+ */
 class UserController extends Controller
 {
     /**

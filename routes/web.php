@@ -13,10 +13,10 @@ Route::get('/', [UserController::class, 'listAll']);
 
 //Rotas para configurações de usuarios (CRUD) 
 Route::prefix('usuarios')->group(function () {
-    Route::get('/', [UserController::class, 'listAll']);
+    Route::get('/', [UserController::class, 'listAll'])->name('usuarios');
     Route::get('/adicionar-usuario', [UserController::class, 'formAddUser']);
     Route::post('/adicionar-usuario', [UserController::class, 'addUser'])->name('adiciona-usuario');
-    Route::delete('/deletar-usuario/{iduser}', [UserController::class, 'deleteUser']);
+    Route::get('/deletar-usuario/{iduser}', [UserController::class, 'deleteUser']);
     Route::get('/editar-usuario/{iduser}', [UserController::class, 'formUpdateUser']);
     Route::post('/editar-usuario', [UserController::class, 'updateUser'])->name('edita-usuario');
 });

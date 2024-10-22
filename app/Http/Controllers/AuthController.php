@@ -11,8 +11,10 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
-use function Laravel\Prompts\password;
 
+/**
+ * Controller responsavel pelas validações de login
+ */
 class AuthController extends Controller
 {
     
@@ -90,16 +92,31 @@ class AuthController extends Controller
         );
     
         if ($response == Password::RESET_LINK_SENT) {
-            return redirect()->back()->with('success', __('validation.reset_link_sent'));
+            return redirect('/login')->with('success', __('validation.reset_link_sent'));
         }
     
         return redirect()->back()->with('fail', __('validation.reset_link_failed'));
     }
 
+    /**
+     * Metodo que exibe o formulário para atualizar a senha
+     * 
+     * @param string $token é o token gerado no banco de dados
+     * @param string $email é o email para que o token foi gerado
+     * 
+     * @return view
+     */
     public function showResetPasswordForm($token, $email) {
         return view('atualiza-senha', compact('token', 'email'));
     }
 
+    /**
+     * Metodo que recebe os dados do formulario e atualiza as informações
+     * 
+     * @param Request $request 
+     * 
+     * @return  \Illuminate\Http\RedirectResponse
+     */
     public function updatePassword(Request $request) {
         
         $request->validate([

@@ -68,6 +68,22 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>   
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const spans = document.querySelectorAll('span');
+            spans.forEach(span => {
+                if (span) {
+                    setTimeout(() => {
+                        span.classList.add('fade-out');
+                        setTimeout(() => {
+                            span.style.display = 'none';
+                        }, 500);
+                    }, 3000);
+                }
+            });
+        });
+   </script>
 </body>
 </html>
