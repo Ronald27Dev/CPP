@@ -19,7 +19,7 @@
             @endif
             <div class="card-body">
                 <div class="mb3">
-                    <form action="{{route('edita-usuario')}}" method="post">
+                    <form id="userForm" action="{{route('edita-usuario')}}" method="post">
                         @csrf 
                         <input type="hidden" name="user_id" value="{{$user->id}}">
                         <div class="mb-3">
@@ -63,14 +63,70 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                        <button type="button" class="btn btn-primary" id="submitBtn">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#returnModal">Cancelar</button> 
                     </form>
                 </div>
             </div>
         </div>
     </div>   
     
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirmação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Você tem certeza que deseja cadastrar este usuário?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmSubmit">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Return Modal -->
+    <div class="modal fade" id="returnModal" tabindex="-1" aria-labelledby="returnModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="returnModalLabel">Cancelar Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja cancelar o cadastro? Todas as informações serão perdidas.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    <a href="{{ route('usuarios') }}" class="btn btn-danger">Sim</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const submitBtn = document.getElementById('submitBtn');
+            const confirmSubmit = document.getElementById('confirmSubmit');
+
+            submitBtn.addEventListener('click', function() {
+                const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                confirmModal.show();
+            });
+
+            confirmSubmit.addEventListener('click', function() {
+                document.getElementById('userForm').submit();
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', function() {
             const spans = document.querySelectorAll('span');
             spans.forEach(span => {

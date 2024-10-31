@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 	<style>		   
 		@import url('https://fonts.googleapis.com/css?family=Mukta');
 		body{
@@ -34,14 +34,14 @@
 			width:70%;
 			right:0;left:0;
 			margin:auto;
-			height:400px;
+			height:44%;
 			background-color: rgba(20, 175, 236, 1);
 		}
 		.white-panel{
 			background-color: rgba(255,255, 255, 1);
-			height:500px;
+			height:130%;
 			position:absolute;
-			top:-50px;
+			top:-15%;
 			width:50%;
 			right:calc(50% - 50px);
 			transition:.3s ease-in-out;
@@ -125,23 +125,40 @@
 			display:inline-block;
 			padding:10px 0;
 		}
-		.credit {
-			position:absolute;
-			bottom:10px;
-			left:10px;
-			color: #3B3B25;
-			margin: 0;
-			padding: 0;
-			font-family: Arial,sans-serif;
-			text-transform: uppercase;
-			font-size: 12px;
-			font-weight: bold;
-			letter-spacing: 1px;
-			z-index: 99;
-		}
 		a{
 		text-decoration:none;
 		color:#2c7715;
+		}
+
+		@media(max-width: 768px){
+			body {
+				background-image: none; /* Change background for mobile, if desired */
+				background-color: #f0f0f0; /* Light background for better readability */
+			}
+
+			.login-reg-panel {
+				width: 90%;
+				padding: 15px; Reduce padding 
+				display: hidden;
+			}
+
+			.white-panel {
+				padding: 15px; /* Adjust padding */
+				right:calc(5%);
+				width: 90%;
+			}
+
+			.login-show input[type="email"],
+			.login-show input[type="password"],
+			.login-show button {
+				width: 100%; /* Full width */
+				margin: 10px 0; /* Adjust margin */
+				padding: 12px; /* Adjust padding */
+			}
+
+			.register-info-box {
+				display: none; /* Hide registration info on mobile */
+			}
 		}
 	</style>
 </head>

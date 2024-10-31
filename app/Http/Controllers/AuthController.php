@@ -24,7 +24,7 @@ class AuthController extends Controller
      * @return view
      */
     public function loginForm() {
-        return view('login');
+        return view('login/login');
     }
 
     /**
@@ -68,7 +68,7 @@ class AuthController extends Controller
      * @return view
      */
     public function forgotPasswordForm() {
-        return view('forgot');
+        return view('login/forgot');
     }
 
     /**
@@ -107,7 +107,7 @@ class AuthController extends Controller
      * @return view
      */
     public function showResetPasswordForm($token, $email) {
-        return view('atualiza-senha', compact('token', 'email'));
+        return view('login/atualiza-senha', compact('token', 'email'));
     }
 
     /**

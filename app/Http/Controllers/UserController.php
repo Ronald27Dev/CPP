@@ -22,9 +22,16 @@ class UserController extends Controller
     public function listAll() {
 
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
+        else {
 
-        $users = User::all();
-        return view('usuarios', compact('users'));
+            $currentUser = Auth::user();
+            if($currentUser->role > -1){
+                $users = User::orderBy('role')->get();
+                return view('usuarios/usuarios', compact('users', 'currentUser'));
+            } else {
+                return redirect('/')->with('fail', 'Você não possui permissão para acessar esse endereço');
+            }
+        }
     }
 
     /**
@@ -35,7 +42,7 @@ class UserController extends Controller
     public function formAddUser() {
 
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
-        return view('adiciona-usuarios');
+        return view('usuarios/adiciona-usuarios');
     }
 
     /**
@@ -46,7 +53,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function addUser(Request $request) {
-
+        
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
 
         $request->validate([
@@ -54,6 +61,7 @@ class UserController extends Controller
             'email'         => 'required|email|unique:users',
             'phone_number'  => 'required|integer',
             'password'      => 'required|confirmed|min:8|max:20',
+            'role'          => 'required|in:1,2,3',
         ]);
 
         try {
@@ -62,6 +70,7 @@ class UserController extends Controller
                 'email'         => $request->email,
                 'phone_number'  => $request->phone_number,
                 'password'      => Hash::make($request->password),
+                'role'          => $request->role,
             ]);
 
             return redirect('usuarios')->with('success', 'Usuário Adicionado!');
@@ -102,7 +111,7 @@ class UserController extends Controller
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
 
         $user = User::findOrFail($iduser);
-        return view('edita-usuarios', compact('user'));
+        return view('usuarios/edita-usuarios', compact('user'));
     }
 
     /**

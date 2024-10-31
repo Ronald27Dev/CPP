@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -9,7 +11,24 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/', [UserController::class, 'listAll']);
+Route::get('/', function() {
+    if(Auth::check()){
+        $currentUser = Auth::user();
+        return view('dashboard', compact('currentUser'));
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/lista', function() {
+    if(Auth::check()){
+        return view('professor/informaPresenca');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+
+
+// Route::get('/', [UserController::class, 'listAll']);
 
 //Rotas para configurações de usuarios (CRUD) 
 Route::prefix('usuarios')->group(function () {
@@ -33,3 +52,16 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('resetar-senha/{token}/{email}', [AuthController::class, 'showResetPasswordForm'])->name('password.reset');
 // Rota para processar a redefinição de senha
 Route::post('resetar-senha', [AuthController::class, 'updatePassword'])->name('password.update');
+
+
+/**
+ * Rotas de registro de alunos
+ */
+Route::prefix('alunos')->group(function () {
+    Route::get('/', [StudentController::class, 'listAll']);
+    Route::get('/adicionar-aluno', [StudentController::class, 'formAddStudent']);
+    Route::post('/adicionar-aluno', [StudentController::class, 'addStudent'])->name('adiciona-aluno');
+    Route::get('/deletar-aluno/{idStudent}', [StudentController::class, 'deleteStudent']);
+    Route::get('/editar-aluno/{idStudent}', [StudentController::class, 'formUpdateStudent']);
+    Route::post('/editar-aluno', [StudentController::class, 'updateStudent'])->name('edita-aluno');
+});
