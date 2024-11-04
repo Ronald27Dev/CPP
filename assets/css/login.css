@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+section {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 93% 7%;
+    grid-template-areas:
+        "img form"
+        "footer footer";
+
+    overflow: hidden;
+    position: relative;
+}
+
+.imagem-container {
+    grid-area: img;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: translateY(64px);
+}
+
+.background-login {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-content: end;
+    height: 90%;
+    margin-top: 10%;
+    margin-left: 55px;
+}
+
+.imagem-container .aluno_base {
+    border-radius: 10px;
+    height: 90%;
+    transform: rotate(-17deg);
+}
+
+
+/* Form */
+.form-container {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    flex-flow: column nowrap;
+}
+
+.form-container form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    height: 40%;
+    width: 80%;
+    padding: 5px;
+    /* border: 1px solid black; */
+    gap: 5px;
+}
+
+.logo {
+    margin-top: 50px;
+    margin-bottom: -20px;
+    margin-right: 60px;
+    /* border: 1px solid black; */
+}
+
+.form-container div {
+    display: flex;
+    flex-flow: column nowrap;
+    /* border: 1px solid black; */
+
+    width: 90%;
+}
+
+input {
+    padding: 9px;
+    margin: 3px 0;
+}
+
+.esqueceu_senha {
+    text-decoration: none;
+    color: rgb(0, 112, 209);
+    margin-left: auto; 
+}
+
+.butao {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 112, 209);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.butao:hover {
+    background-color: rgb(0, 91, 170);
+    transition: all 0.3s ease;
+}
+
+.forgot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto_credencial {
+    cursor: auto;
+    padding-left: 2px;
+    font-size: 15px;
+}
+
+.texto_senha {
+    font-size: 13px;
+}
+
+.butao_google {
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+
+    width: 80%;
+    display: flex;
+    justify-content: center;    
+    align-self: center;
+
+    margin-top: 4px;
+    padding: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+    gap: 3px;
+}
+/* Form */
+
+footer {
+    grid-area: footer;
+    background-color: rgb(0, 90, 170);
+    color: white;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-style: italic;
+}
+
+footer p {
+    margin-right: 50px;
+}
