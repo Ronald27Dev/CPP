@@ -6,19 +6,15 @@
     box-sizing: border-box;
 }
 
-
 section {
     height: 100vh;
-
     display: grid;
-    /* grid-template-columns: 248px auto; */
     grid-template-columns: 16% 84%;
     grid-template-rows: 7% auto;
     grid-template-areas: 
         "aside header"
         "aside main";
 }
-
 
 /* aside */
 aside {
@@ -28,8 +24,6 @@ aside {
     flex-flow: column nowrap;
     padding-top: 45px;
     background-color: rgb(1, 86, 160);
-
-    /* border: 1px solid black; */
 }
 
 .aside-link-container {
@@ -96,10 +90,8 @@ header {
     min-width: 300px;
     padding: 10px;
     padding-bottom: 40px;
-    
     height: 71%;
     width: 40%;
-    
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -169,14 +161,12 @@ header {
     .container-infos p span {
         width: 50%;
         margin-right: 60px;
-        border: 1px solid purple;
     }
 }
 @media (max-width: 1400px) {
     .container-infos p span {
         width: 55%;
         margin-right: 26px;
-        border: 1px solid purple;
     }
 }
 @media (max-width: 1200px) {
@@ -221,8 +211,6 @@ header {
     .container-infos p span {
         width: 98%;
         text-align: center;
-        border: 1px solid purple;
-        /* border: none; */
     }
     .container-infos p {
         display: flex;
@@ -231,7 +219,7 @@ header {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) { /* Fazer menu pra mobile */
     section {
         display: flex;
         flex-flow: column nowrap;
@@ -265,7 +253,7 @@ header {
         align-items: center;
         border: 1px solid black;
     }
-    
+
     .container-foto {
         margin: 0;
         min-width: 200px;
