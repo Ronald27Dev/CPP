@@ -13,8 +13,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
     if(Auth::check()){
-        $currentUser = Auth::user();
-        return view('dashboard', compact('currentUser'));
+        // $currentUser = Auth::user();
+        return view('/public/index');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/notas', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/notas');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/horario', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/horario');
     } else 
         return redirect('/login')->with('fail', 'Você não esta logado');
 });

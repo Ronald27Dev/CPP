@@ -14,7 +14,7 @@
 			font-family: 'Mukta', sans-serif;
 			height:100vh;
 			min-height:550px;
-			background-image: url("https://images.pexels.com/photos/2387532/pexels-photo-2387532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqf8M1kkjbf14C4Oh6OSFsyOPIiipCucW9Q&s");
 			background-repeat: no-repeat;
 			background-size:cover;
 			background-position:center;
