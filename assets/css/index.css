@@ -9,7 +9,7 @@
 section {
     height: 100vh;
     display: grid;
-    grid-template-columns: 16% 84%;
+    grid-template-columns: 13% 87%;
     grid-template-rows: 7% auto;
     grid-template-areas: 
         "aside header"
@@ -19,7 +19,7 @@ section {
 /* aside */
 aside {
     grid-area: aside;
-    width: 100%;    
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     padding-top: 45px;
@@ -69,7 +69,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    /* border: 1px solid black; */
+    border-bottom: 1px solid black;
 }
 /* header */
 
@@ -82,7 +82,6 @@ header {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: start;
-    border: 1px solid black;
 }
 
 .container-foto {
@@ -170,8 +169,12 @@ header {
     }
 }
 @media (max-width: 1200px) {
+    section {
+        grid-template-columns: 15% 85%;
+    }
     aside {
         min-width: 120px;
+        width: 100%;
     }
     .aside-link-container{
         font-size: 15px;
@@ -181,6 +184,7 @@ header {
         font-size: 12px;
     }
     .profile {
+        font-size: 15px;
         gap: 10px;
         padding-top: 20px;
         display: flex;
@@ -192,9 +196,9 @@ header {
     }
     .container-foto {
         margin: 0;
-        margin-left: 40px;
+        margin-left: 50px;
         min-width: 200px;
-        width: 42%;
+        width: 38%;
     }
     .container-foto img {
         height: auto;
@@ -205,8 +209,8 @@ header {
     .container-infos {
         margin: 0;
         gap: 0;
-        margin-right: 70px;
-        width: 50%;
+        margin-right: 50px;
+        width: 45%;
     }
     .container-infos p span {
         width: 98%;
@@ -276,9 +280,6 @@ header {
     }
 }
 
-
-
-
 /* Notas */
 .notas {
     grid-area: main;
@@ -291,41 +292,161 @@ header {
     border: 1px solid black;
 }
 
-caption {
+.notas caption {
     margin-bottom: 100px;
     font-size: 18px;
 }
 
-table {
+.notas table hr {
+    margin-top: 8px;
+}
+
+.notas table {
     width: 80%;
     border-collapse: collapse;
 
     margin-bottom: 200px;
 }
 
-th, td {
+.notas th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
 }
 
-th {
+.notas th {
     text-align: center;
     background-color: #d1d0d0;
 }
 /* Notas */
 
+/* Calendario */
+.calendario {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+        "titulo titulo"
+        "article table";
+}
 
+article {
+    grid-area: article;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
+article div {
+    height: 79%;
+    width: 100%;
+    border-right: 1px solid grey;
+}
 
-/* Media Query */
-/* @media (max-width: 768px) {
-    section {
-        grid-template-columns: minmax(124px, 13vw) auto;
-    }
+article div div {
+    border: none;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
 
-    .aside {
-        max-width: 248px;
-        min-width: 124px;
-    }
-} */
+article h1 {
+    text-align: center;
+}
+
+article p {
+    width: 95%;
+    margin-left: 15px;
+    text-align: left;
+    padding: 10px 0;
+
+    cursor: pointer;
+}
+
+article p:hover {
+    background-color: rgb(235, 235, 255);
+    border-right: 5px solid rgb(109, 109, 253);
+}
+
+.hr-vertical {
+    border-left: 1px solid tomato;
+    height: 500px;
+
+    position: absolute;
+    transform: translateX(120px);
+}
+
+.titulo-calendario {
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    width: 90%;
+    margin-left: 70px;
+    border-bottom: 1px solid blue;
+}
+
+.titulo-calendario h1 {
+    font-size: 17px;
+}
+
+.posts {
+    grid-area: table;
+    height: 600px;
+    width: 95%;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.posts table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.posts thead th{
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
+}
+
+.posts th, .posts td {
+    padding: 8px;
+    padding-bottom: 12px;
+    word-wrap: break-word;
+    border: none;
+}
+
+.posts tbody {
+    height: auto;
+}
+
+.posts tr:nth-child(-n+3) td:nth-child(5) div {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(255, 99, 71, 0.212);
+    color: tomato;
+}
+
+.posts tr:nth-child(n+4) td:nth-child(5) div {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(244, 208, 63, 0.349) ;
+    color: rgb(206, 176, 55);
+}
+
+.posts img {
+    filter: invert(38%) sepia(100%) saturate(800%) hue-rotate(180deg) brightness(90%);
+    cursor: pointer;
+}
+/* Calendario */
