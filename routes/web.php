@@ -5,6 +5,8 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AttendanceController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -81,3 +83,12 @@ Route::prefix('alunos')->group(function () {
     Route::get('/editar-aluno/{idStudent}', [StudentController::class, 'formUpdateStudent']);
     Route::post('/editar-aluno', [StudentController::class, 'updateStudent'])->name('edita-aluno');
 });
+
+// Exibe o formulário para registrar a presença
+Route::get('/attendance/register', [AttendanceController::class, 'showRegisterForm'])->name('attendance.register');
+
+// Registra as presenças no banco de dados
+Route::post('/attendance/register', [AttendanceController::class, 'registerAttendance']);
+
+// Exibe a lista de presenças registradas
+Route::get('/attendance/list', [AttendanceController::class, 'showAttendanceList'])->name('attendance.list');
