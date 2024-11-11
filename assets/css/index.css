@@ -170,8 +170,14 @@ header {
     height: 400px;
     width: 55%;
     display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.container-noticias {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 15px;
 }
 
 .noticias p {
@@ -180,7 +186,8 @@ header {
     padding-left: 8px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: space-evenly;
+    text-align: left;
 }
 
 .noticias span {
@@ -240,12 +247,7 @@ header {
 .profile-infos h1 {
     font-weight: bold;
 }
-
-
-
-
 /* Perfil */
-
 
 
 /* Classe Perfil */
