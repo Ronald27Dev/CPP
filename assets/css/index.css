@@ -74,93 +74,328 @@ header {
 }
 /* header */
 
-/* Profile */
-.profile {
+/* Início */
+.home {
     grid-area: main;
-    background-color: rgb(234, 234, 250);
-    
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: start;
-}
-
-.container-foto {
-    margin-left: 40px;
-    min-width: 300px;
-    padding: 10px;
-    padding-bottom: 40px;
-    height: 73%;
-    width: 40%;
+    border: 1px solid black;
+    width: 90%;
+    height: 95%;
+    place-self: center center;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
-    background-color: white;
+}
+
+.banner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(to right bottom, purple, purple 10%, blue 90%, purple);
     border: 1px solid black;
+}
+
+.titulo-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    height: 100%;
+}
+
+.titulo-banner h1 {
+    font-weight: bold;
+    color: white;
+}
+
+.titulo-banner h3 {
+    color: white;
+    text-align: center;
+}
+
+.desc-banner {
+    background-color: white;
+    border-radius: 30px;
+    color: rgb(2, 2, 151);
+    width: 120%;
+    height: 80%;
+    display: flex;
+    margin-right: 5px;
+}
+
+.aba-left {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.aba-left p {
+    border-left: 2px solid black;
+    padding-left: 7px;
+    font-size: 14px;
+}
+
+.aba-left span {
+    font-weight: bold;
+}
+
+.aba-right {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.aba-right p {
+    border-left: 2px solid black;
+    padding-left: 7px;
+    font-size: 14px;
+}
+
+.aba-right span {
+    font-weight: bold;
+}
+
+.noticias {
+    height: 400px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.noticias p {
+    border-left: 2px solid green;
+    height: 80px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.noticias span {
+    font-size: small
+}
+/* Início */
+
+/* Perfil */
+.profile {
+    grid-area: main;
+    width: 90%;
+    height: 80%;
+    place-self: center center;
+    display: flex;
+    flex-flow: row nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.295);
     border-radius: 5px;
 }
 
-.container-foto img {
+.profile-foto {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+.profile-foto img {
+    width: 72%;
+    padding-top: 7px;
+    border-radius: 20px;
+}
+
+.profile-infos {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.profile-infos p {
+    text-align: left;
+    width: 90%;
+    color: grey;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile-infos p img {
+    margin-left: 3px;
+    margin-right: 15px;
+}
+
+.profile-infos h1 {
+    font-weight: bold;
+}
+
+
+
+
+/* Perfil */
+
+
+
+/* Classe Perfil */
+.profs {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+        ". titulo ."
+        "prev container next";
+    border: 1px solid black;
+}
+
+.prev {grid-area: prev;}
+.next {grid-area: next;}
+
+.carousel-container {
+    grid-area: container;
+    display: flex;
+    overflow: hidden;
+    width: 1100px;
+    gap: 20px;
+    height: 90%;
+    position: relative;
+    transition: transform 1s ease-in-out;
+}
+
+.container-profile {
+    flex: 0 0 350px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 8px solid rgb(70, 70, 255);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.profs h1 {
+    grid-area: titulo;
+    height: 70px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    place-self: center center;
+    background: linear-gradient(135deg, #000000, rgb(70, 70, 255));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    place-self: center center;
+    height: 40px;
+    width: 40px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.img-container {
+    max-width: 218px;
+    height: 200px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 90%;
     height: auto;
-    max-height: 280px;
-    
-    min-width: 150px;
-    max-width: 300px;
-    margin-top: 3px;
     border-radius: 10px;
 }
 
-.desc {
+.container-profile p {
+    text-align: left;
+    color: gray;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+.container-profile p img {
+    padding-right: 8px;
+}
+
+.disciplina { /* Professor */
+    width: 300px;
+    height: 50px;
+    background: linear-gradient(135deg, #000000, #655580);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados-adicionais {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 8px;
-    margin-top: 15px;
-    padding-bottom: 10px;
-    text-align: center;
+    justify-content: left;
+    margin-bottom: 18px;
+    padding-bottom: 20px;
 }
 
-.desc p {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-}
-
-.desc span {
-    display: block;
-}
-
-.container-infos {
-    height: 75%;
-    width: 50%;
-    margin-top: 25px;
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.container-infos p {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    margin-left: 10px;
-    padding-top: 10px;
-    border-bottom: 1px solid gray;
-}
-
-.container-infos p span {
-    display: inline-block;
-    width: 50%;
-    margin-right: 70px;
+.dados-adicionais span { /* Alunos */
     text-align: left;
-    /* border: 1px solid black; */
+    color: gray;
+    display: flex;
+    align-items: center;
 }
-/* Profile */
 
+.dados-adicionais span img {
+    padding-right: 4px;
+}
+
+.dados-adicionais h4 {
+    margin-top: 4px;
+    text-align: center;
+}
+
+.dados-adicionais p {
+    border-bottom:1px solid black;
+}
+
+.desc-prof h4{
+    text-align: center;
+}
+
+.estilo {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    background-color: rgb(24, 16, 27);
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Classe Perfil */
 
 /* Notas */
 .container_notas {
@@ -374,7 +609,7 @@ header {
         "article table";
 }
 
-article {
+.calendario article {
     grid-area: article;
     height: 100%;
     display: flex;
@@ -383,13 +618,13 @@ article {
     align-items: center;
 }
 
-article div {
+.calendario article div {
     height: 79%;
     width: 100%;
     border-right: 1px solid grey;
 }
 
-article div div {
+.calendario article div div {
     border: none;
     margin-top: 50px;
     display: flex;
@@ -397,11 +632,11 @@ article div div {
     align-items: center;
 }
 
-article h1 {
+.calendario article h1 {
     text-align: center;
 }
 
-article p {
+.calendario article p {
     width: 95%;
     margin-left: 15px;
     text-align: left;
@@ -410,7 +645,7 @@ article p {
     cursor: pointer;
 }
 
-article p:hover {
+.calendario article p:hover {
     background-color: rgb(235, 235, 255);
     border-right: 5px solid rgb(109, 109, 253);
 }
@@ -499,8 +734,7 @@ article p:hover {
     height: 700px;
     margin: 40px auto;
     border: 1px solid black;
-    border-radius: 5px;
-
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,25 +742,27 @@ article p:hover {
 }
 
 .form-calendario form {
-    height: 400px;
-    width: 50%;
+    height: 90%;
+    width: 90%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+    justify-content: start;
+    gap: 40px;
+    padding: 30px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: white;
-
 }
 
-.form-calendario div {
+.form-calendario span {
+    font-style: italic;
+}
+
+.desc-desc {
     display: flex;
     justify-content: space-between;
-    padding: 7px;
-    gap: 2px;
-    border: 1px solid black;
+    gap: 15px;
+    /* border: 1px solid black; */
 }
 
 .form-calendario label {
@@ -535,17 +771,24 @@ article p:hover {
     width:50%;
     text-align: left;
     border: 1px solid black;
+    background-color: rgb(186, 186, 253);
     gap: 5px;
-    padding-left: 4px;
 }
 
-.form-calendario div:nth-child(3) label{
+.form-calendario div:nth-child(3) label {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 60px;
     width: 100%;
+}
+
+.butao-form {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .form-calendario input[type="submit"] {
@@ -558,6 +801,18 @@ article p:hover {
     font-size: 16px;
     cursor: pointer;
 }
+
+.form-calendario input[type="reset"] {
+    width: 100px;
+    height: 39px;
+    padding: 4px;
+    background-color: rgb(117, 116, 116);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 /* Calendario */
 
 

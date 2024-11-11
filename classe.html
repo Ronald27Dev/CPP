@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaPaisProfessores</title>
+
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="shortcut icon" href="assets/img/graduation-cap.svg" type="image/x-icon">
+
+    
+</head>
+<body>
+
+    <section>
+
+        <aside>
+            <img src="assets/img/graduation-cap.svg">
+            <div class="aside-link-container">
+                <a href="index.html"><img src="assets/img/icons/home.png"> <span>Início</span></a>
+                <a href="perfil.html"><img src="assets/img/icons/euser.png"><span>Perfil</span></a>
+                <a href="classe.html"><img src="assets/img/icons/user.png"> <span>Classe</span></a>
+                <a href="calendario.html"><img src="assets/img/icons/calendar-day.png"> <span>Calendário</span></a>
+                <!-- <a href="notas.html"><img src="assets/img/icons/receipt.png"> <span>Nota e Frequência</span></a> ALUNOS --> 
+                <a href="notas.html"><img src="assets/img/icons/receipt.png"> <span>Notas</span></a>
+                <a href="frequencia.html"><img src="assets/img/icons/receipt.png"> <span>Frequência</span></a>
+                <a href="horario.html"><img src="assets/img/icons/clock.png"> <span>Horário</span></a>
+                <a href="#"><img src="assets/img/icons/envelope.png"> <span>Mensagens</span></a>
+                <a href="#"><img src="assets/img/icons/bell.png"> <span>Avisos</span></a>
+                <a href="#"><img src="assets/img/icons/megaphone.png"> <span>Ocorrências</span></a>
+                <a href="login.html"><img src="assets/img/icons/sign-out-alt.png"> <span>Sair</span></a>
+            </div>
+        </aside>
+
+        <header>
+            <h3>Bem vindo Moreno</h3>
+            <a href="#"><img src="assets/img/icons/bell.png"></a>
+        </header>
+        
+
+        <!-- Professores -->
+
+        <main class="profs" id="carrossel">
+            <h1>Alunos</h1>
+            
+            <div class="prof">
+                <label for="turma">Turma:
+                    <select name="turma" id="turma">
+                        <option value="6°A">6°A</option>
+                        <option value="6°B">6°B</option>
+                        <option value="6°C">6°C</option>
+                    </select>
+                </label>
+            </div>
+
+            <button onclick="mudarCarrossel(-1)" class="prev">&#10094;</button>
+            <button onclick="mudarCarrossel(1)" class="next">&#10095;</button>
+
+            <div class="carousel-container" id="carouselInner">
+
+                <div class="container-profile">
+
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/Juvenal Cabeção de Melo.jpg" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Juvenal Cabeção de Melo</h4>
+                        <p>6°A | 11 anos | Bananil, MG</p>
+                    </div>
+    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 12/04/2013</span>
+                        <h4>Responsáveis</h4>
+                        <span>Aristides Cabeção de Melo</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 91234-5678</span>
+                        <span>Donana Pamonha de Melo</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 93456-7890</span>
+                        <p></p>
+                    </div>
+
+                </div>
+                
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/Lorde Batatinha Engomado.jpg" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Lorde Batatinha Engomado</h4>
+                        <p>6°A | 3 anos | Bananil, MG</p>
+                    </div>
+    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 01/01/2021</span>
+                        <h4>Responsáveis</h4>
+                        <span>Conde Petisco Engomado</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 94567-1234</span>
+                        <span>Duquesa Ração Gourmet</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 95678-2345</span>
+                        <p></p>
+                    </div>
+
+                </div>
+    
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/Zeca Pipoca Farofa.png" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Zeca Pipoca Farofa</h4>
+                        <p>6°A | 11 anos | Bananil, MG</p>
+                    </div>
+                    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 14/08/2013</span>
+                        <h4>Responsáveis</h4>
+                        <span>Juvenal Farofa</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 91234-5678</span>
+                        <span>Marlene Milho de Farofa</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 92345-6789</span>
+                        <p></p>
+                    </div>
+    
+                </div>
+
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/Pérola Fofoca de Sousa.jpg" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Pérola Fofoca de Sousa</h4>
+                        <p>6°A | 10 anos | Bananil, MG</p>
+                    </div>
+                    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 30/10/2013</span>
+                        <h4>Responsáveis</h4>
+                        <span>Bonifácio Fofoqueiro de Sousa</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 98901-2345</span>
+                        <span>Filomena Xepa de Sousa</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 90123-4567</span>
+                        <p></p>
+                    </div>
+    
+                </div>
+
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/Tadeu Bolacha Quebrada.png" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Tadeu Bolacha Quebrada</h4>
+                        <p>6°A | 11 anos | Bananil, MG</p>
+                    </div>
+                    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 05/02/2013</span>
+                        <h4>Responsáveis</h4>
+                        <span>Genivaldo Quebrada</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 96789-2345</span>
+                        <span>Creuza Farofa Quebrada</span>
+                        <span><img src="assets/img/icons/phone.png">  (31) 97890-3456</span>
+                        <p></p>
+                    </div>
+    
+                </div>
+
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/alunos/6°A/mini vegetti.png" alt="Foto de perfil Alun@">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Mini Vegetti da Silva</h4>
+                        <p>6°A | 9 anos | Bananil, MG</p>
+                    </div>
+                    
+                    <div class="dados-adicionais">
+                        <h4>Infos adicionais</h4>
+                        <span>Data de Nascimento: 25/12/1924</span>
+                        <h4>Responsáveis</h4>
+                        <span>Grande Vegetti da Silva</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 91234-5678</span>
+                        <span>Flora Legumes da Silva</span>
+                        <span><img src="assets/img/icons/phone.png"> (31) 92345-6789</span>
+                        <p></p>
+                    </div>
+    
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Pais -->
+        <!-- <main class="profs" id="carrossel">
+            <h1>Professores</h1>
+
+            <button onclick="mudarCarrossel(-1)" class="prev">&#10094;</button>
+            <button onclick="mudarCarrossel(1)" class="next">&#10095;</button>
+
+            <div class="carousel-container" id="carouselInner">
+
+                <div class="container-profile">
+
+                    <div class="img-container">
+                        <img src="assets/img/professores/Tibúrcia Pé-de-moleque Costa.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div class="desc-prof">
+                        <h4>Tibúrcia Pé-de-moleque Costa</h4>
+                        <p>Ela/Dela | 46 anos | Passa Quatro, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 94567-1234<br>
+                        <img src="assets/img/icons/email.png">tiburcia.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Geografia</h2>
+                    </div>
+
+    
+                </div>
+                
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Tonico Goiabinha Almeida.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Tonico Goiabinha Almeida</h4>
+                        <p>Ele/Dele | 42 anos | Sem-Peixe, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 91234-5678 <br>
+                        <img src="assets/img/icons/email.png">tonico.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Artes</h2>
+                    </div>
+    
+                </div>
+    
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Joventino Pão-duro da Silvaaa.png" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Joventino Mito da Silva</h4>
+                        <p>Ele/Dele | 49 anos | Buritizeiro, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 93456-7890<br>
+                        <img src="assets/img/icons/email.png">joventino.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>História</h2>
+                    </div>
+    
+                </div>
+
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Raimundo Silva de Araújo.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Raimundo Silva de Araújo</h4>
+                        <p>Ele/Dele | 65 anos | Anta Gorda, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 98765-4321<br>
+                        <img src="assets/img/icons/email.png">raimundo.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Matemática</h2>
+                    </div>
+    
+                </div>
+    
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Donária Bananada de Souza.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Donária Bananada de Souza</h4>
+                        <p>Ela/Dela | 44 anos | Cabeceira Grande, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 91234-5678<br>
+                        <img src="assets/img/icons/email.png">donaria.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Ciências</h2>
+                    </div>
+    
+                </div>
+    
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Gilmar Pamonha dos Santos.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Gilmar Pamonha dos Santos</h4>
+                        <p>Ele/Dele | 59 anos | Formoso, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 92345-6789<br>
+                        <img src="assets/img/icons/email.png">gilmar.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Educação Física</h2>
+                    </div>
+    
+                </div>
+    
+                <div class="container-profile">
+    
+                    <div class="img-container">
+                        <img src="assets/img/professores/Perpétua Bolachinha Carneiro.jpg" alt="Foto de perfil Professores">
+                    </div>
+    
+                    <div>
+                        <h4>Perpétua Bolachinha Carneiro</h4>
+                        <p>Ela/Dela | 52 anos | Pintópolis, MG</p>
+                    </div>
+    
+                    <div>
+                        <h4>Contato</h5>
+                        <p><img src="assets/img/icons/phone.png">(31) 96789-1234<br>
+                        <img src="assets/img/icons/email.png">perpetua.prof@cpp.edu.br</p>
+                    </div>
+    
+                    <div class="disciplina">
+                        <h2>Língua Portuguesa</h2>
+                    </div>
+    
+                </div>
+            </div>
+
+        </main> -->
+    </section>
+
+    <script src="assets/carrossel.js"></script>
+
+</body>
+</html>

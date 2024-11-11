@@ -18,8 +18,10 @@
             <img src="assets/img/graduation-cap.svg">
             <div class="aside-link-container">
                 <a href="index.html"><img src="assets/img/icons/home.png"> <span>Início</span></a>
+                <a href="perfil.html"><img src="assets/img/icons/euser.png"><span>Perfil</span></a>
+                <a href="classe.html"><img src="assets/img/icons/user.png"> <span>Classe</span></a>
                 <a href="calendario.html"><img src="assets/img/icons/calendar-day.png"> <span>Calendário</span></a>
-                <!-- <a href="notas.html"><img src="assets/img/icons/receipt.png"> <span>Nota e Frequência</span></a> -->
+                <!-- <a href="notas.html"><img src="assets/img/icons/receipt.png"> <span>Nota e Frequência</span></a> ALUNOS --> 
                 <a href="notas.html"><img src="assets/img/icons/receipt.png"> <span>Notas</span></a>
                 <a href="frequencia.html"><img src="assets/img/icons/receipt.png"> <span>Frequência</span></a>
                 <a href="horario.html"><img src="assets/img/icons/clock.png"> <span>Horário</span></a>
@@ -38,8 +40,9 @@
 
         <main class="form-calendario">
             <form action="">
-                <h3>Formulário</h3>
-                <div>
+                <h3>Calendário <span>CPP</span></h3>
+
+                <div class="desc-desc">
                     <label>Turma
                         <select name="turma" id="turma" required>
                             <option value="" disabled selected>Escolha uma opção</option>
@@ -64,13 +67,13 @@
                     </label>
                 </div>
 
-                <div>
+                <div class="desc-desc">
                     <label>Descrição
                         <input type="text" name="descricao" id="descricao" minlength="5" maxlength="26" required>
                     </label>
                 </div>
 
-                <div>
+                <div class="desc-desc"> 
                     <label>Tipo
                         <select name="tipo" id="tipo" required>
                             <option value="" disabled selected>Escolha uma opção</option>
@@ -86,8 +89,10 @@
                     </label>
                 </div>
 
-                
-                <input type="submit" value="Enviar">
+                <div class="butao-form">
+                    <input type="reset" value="Refazer">
+                    <input type="submit" value="Enviar">
+                </div>
                 
             </form>
         </main>
