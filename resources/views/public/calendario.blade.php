@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectaPaisProfessores</title>
+    <title>CPP | Calendario</title>
 
     <link rel="stylesheet" href="/css/index.css">
     <link rel="shortcut icon" href="/image/graduation-cap.svg" type="image/x-icon">
@@ -16,20 +16,20 @@
         <aside>
             <img src="/image/graduation-cap.svg">
             <div class="aside-link-container">
-                <a href="/"><img src="/image/icons/home.png"> <span>Início</span></a>
-                <a href="/perfil"><img src="/image/icons/euser.png"><span>Perfil</span></a>
-                <a href="/chatify"><img src="/image/icons/comment.png"> <span>Chat do Colégio</span></a>
+                <a href="/"><img src="/image/icons/home.png"><span>&nbsp;Início</span></a>
+                <a href="/perfil"><img src="/image/icons/euser.png"><span>&nbsp;Perfil</span></a>
+                <a href="/chatify"><img src="/image/icons/whatsapp.png"> <span>Chat do Colégio</span></a>
                 <a href="/classe"><img src="/image/icons/user.png"> <span>Classe</span></a>
                 <a href="/calendario"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
                 <a href="/notas"><img src="/image/icons/receipt.png"> <span>Notas</span></a>
-                <a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>
+                @if($user['role'] !== 2)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
                 <a href="/horario"><img src="/image/icons/clock.png"> <span>Horário</span></a>
                 <a href="/logout"><img src="/image/icons/sign-out-alt.png"> <span>Sair</span></a>
             </div>
         </aside>
 
         <header>
-            <h3>Bem vindo Moreno</h3>
+            <h3>Bem vindo , {{$user['name']}}</h3>
             <a href="#"><img src="/image/icons/bell.png"></a>
         </header>
 
@@ -61,7 +61,9 @@
                         <option value="6°C">6°C</option>
                     </select>
                 </label>
-                <a href="form-calendario.html">Postar</a>
+                @if($user['role'] !== 3 )
+                    <a href="/form-calendario">Postar</a>
+                @endif
             </div>
 
             <div class="posts">
@@ -74,7 +76,7 @@
                             <th>Descrição</th>
                             <th>Tipo</th>
                             <th>Data</th>
-                            <th>Ver</th>
+                            @if($user['role'] !== 3 )<th>Ver</th>@endif
                         </tr>
                     </thead>
     
@@ -85,7 +87,7 @@
                             <td>Prova</td>
                             <td>Avaliação</td>
                             <td><div>02/12/2024</div></td>
-                            <td><img src="/image/icons/lupinha.png"></td>
+                            @if($user['role'] !== 3 )<td><img src="/image/icons/lupinha.png"></td>@endif
                         </tr>
                         <tr>
                             <td>2</td>
@@ -93,7 +95,7 @@
                             <td>Apresentação de trabalho</td>
                             <td>Trabalho</td>
                             <td><div>03/12/2024</div></td>
-                            <td><img src="/image/icons/lupinha.png"></td>
+                            @if($user['role'] !== 3 )<td><img src="/image/icons/lupinha.png"></td>@endif
                         </tr>
                         <tr>
                             <td>3</td>
@@ -101,7 +103,7 @@
                             <td>Pintura em sala</td>
                             <td>Exercício em Classe</td>
                             <td><div>04/12/2024</div></td>
-                            <td><img src="/image/icons/lupinha.png"></td>
+                            @if($user['role'] !== 3 )<td><img src="/image/icons/lupinha.png"></td>@endif
                         </tr>
                         <tr>
                             <td>4</td>
@@ -109,7 +111,7 @@
                             <td>Projeto Xerimbabo</td>
                             <td>Evento</td>
                             <td><div>05/12/2024</div></td>
-                            <td><img src="/image/icons/lupinha.png"></td>
+                            @if($user['role'] !== 3 )<td><img src="/image/icons/lupinha.png"></td>@endif
                         </tr>
                         <tr>
                             <td>5</td>
@@ -117,7 +119,7 @@
                             <td>Dia do cabelo maluco</td>
                             <td>Evento</td>
                             <td><div>06/12/2024</div></td>
-                            <td><img src="/image/icons/lupinha.png"></td>
+                            @if($user['role'] !== 3 )<td><img src="/image/icons/lupinha.png"></td>@endif
                         </tr>
                     </tbody>
                 </table>

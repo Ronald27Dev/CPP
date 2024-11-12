@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectaPaisProfessores</title>
+    <title>CPP | Frequência</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/index.css">
@@ -19,20 +19,20 @@
         <aside>
             <img src="/image/graduation-cap.svg">
             <div class="aside-link-container">
-                <a href="/"><img src="/image/icons/home.png"> <span>Início</span></a>
-                <a href="/perfil"><img src="/image/icons/euser.png"><span>Perfil</span></a>
-                <a href="/chatify"><img src="/image/icons/comment.png"> <span>Chat do Colégio</span></a>
+                <a href="/"><img src="/image/icons/home.png"><span>&nbsp;Início</span></a>
+                <a href="/perfil"><img src="/image/icons/euser.png"><span>&nbsp;Perfil</span></a>
+                <a href="/chatify"><img src="/image/icons/whatsapp.png"> <span>Chat do Colégio</span></a>
                 <a href="/classe"><img src="/image/icons/user.png"> <span>Classe</span></a>
                 <a href="/calendario"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
                 <a href="/notas"><img src="/image/icons/receipt.png"> <span>Notas</span></a>
-                <a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>
+                @if($user['role'] !== 2)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
                 <a href="/horario"><img src="/image/icons/clock.png"> <span>Horário</span></a>
                 <a href="/logout"><img src="/image/icons/sign-out-alt.png"> <span>Sair</span></a>
             </div>
         </aside>
 
         <header>
-            <h3>Bem vindo Moreno</h3>
+            <h3>Bem vindo, {{$user['name']}}</h3>
             <a href="#"><img src="/image/icons/bell.png"></a>
         </header>
 
@@ -93,10 +93,8 @@
                 
             </form>
         </main>
-
     </section>
         
-
     <script>
         const hoje = new Date();
         
@@ -109,6 +107,5 @@
         // Exibir a data no elemento <span>
         document.getElementById('dataHj').textContent = dataFormatada;
     </script>
-        
-    </body>
-    </html>
+</body>
+</html>
