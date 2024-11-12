@@ -16,17 +16,17 @@
 
     <section>
 
-        <aside class="aside">
+        <aside>
             <img src="/image/graduation-cap.svg">
             <div class="aside-link-container">
                 <a href="/"><img src="/image/icons/home.png"> <span>Início</span></a>
-                <a href="#"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
+                <a href="/perfil"><img src="/image/icons/euser.png"><span>Perfil</span></a>
+                <a href="/chatify"><img src="/image/icons/comment.png"> <span>Chat do Colégio</span></a>
+                <a href="/classe"><img src="/image/icons/user.png"> <span>Classe</span></a>
+                <a href="/calendario"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
                 <a href="/notas"><img src="/image/icons/receipt.png"> <span>Notas</span></a>
-                <a href="#"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>
+                <a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>
                 <a href="/horario"><img src="/image/icons/clock.png"> <span>Horário</span></a>
-                <a href="#"><img src="/image/icons/envelope.png"> <span>Mensagens</span></a>
-                <a href="#"><img src="/image/icons/bell.png"> <span>Avisos</span></a>
-                <a href="#"><img src="/image/icons/megaphone.png"> <span>Ocorrências</span></a>
                 <a href="/logout"><img src="/image/icons/sign-out-alt.png"> <span>Sair</span></a>
             </div>
         </aside>

@@ -35,6 +35,38 @@ Route::get('/horario', function() {
         return redirect('/login')->with('fail', 'Você não esta logado');
 });
 
+Route::get('/calendario', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/calendario');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/perfil', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/perfil');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/classe', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/classe');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
+Route::get('/frequencia', function() {
+    if(Auth::check()){
+        // $currentUser = Auth::user();
+        return view('/public/frequencia');
+    } else 
+        return redirect('/login')->with('fail', 'Você não esta logado');
+});
+
 Route::get('/lista', function() {
     if(Auth::check()){
         return view('professor/informaPresenca');

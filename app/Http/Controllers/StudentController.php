@@ -21,6 +21,8 @@ class StudentController extends Controller
      */
     public function addStudent(Request $request)
     {
+        if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
+
         $request->validate([
             'name'      => 'required|string|max:255',
             'birthdate'  => 'required|date',
@@ -41,6 +43,8 @@ class StudentController extends Controller
      */
     public function updateStudent(Request $request)
     {
+        if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
+
         $request->validate([
             'name'      => 'required|string|max:255',
             'birthdate' => 'required|date',
@@ -114,6 +118,10 @@ class StudentController extends Controller
 
     /**
      * Formulario para atualizar cadastro Alunos
+     * 
+     * @param int $id_student
+     * 
+     * @return view
      */
     public function formUpdateStudent ($id_student) {
 

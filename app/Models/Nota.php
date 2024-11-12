@@ -24,7 +24,7 @@ class Nota extends Model
         'educacao_fisica'
     ];
 
-    protected $table = 'notes';
+    protected $table = 'grades';
 
     public function student() {
         return $this->belongsTo(Student::class);
