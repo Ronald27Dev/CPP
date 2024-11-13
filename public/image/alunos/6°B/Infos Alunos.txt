@@ -1,5 +1,5 @@
 Nome completo: Gatolino Nerdowski
-
+Turma: 6°B
 Idade: 5 anos
 Data de nascimento: 01/04/2019
 Cidade de nascimento: Bananil, MG
@@ -8,10 +8,9 @@ Contato do pai: (31) 94567-1234
 Nome da mãe: Madame Fofura Nerdowski
 Contato da mãe: (31) 95678-2345
 
--------------------------------------------------
 
 Nome completo: Gatolino Descoladovski
-
+Turma: 6°B
 Idade: 4 anos
 Data de nascimento: 20/06/2020
 Cidade de nascimento: Bananil, MG
@@ -20,10 +19,9 @@ Contato do pai: (31) 97890-4567
 Nome da mãe: Fifi do Miado Estiloso
 Contato da mãe: (31) 98901-2345
 
--------------------------------------------------
 
 Nome completo: Creuzolina Pipoca Soares
-
+Turma: 6°B
 Idade: 10 anos
 Data de nascimento: 27/03/2013
 Cidade de nascimento: Bananil, MG
@@ -32,10 +30,9 @@ Contato do pai: (31) 91234-5678
 Nome da mãe: Ritinha Pamonha Soares
 Contato da mãe: (31) 92345-6789
 
--------------------------------------------------
 
 Nome completo: Zorildo Rabanada Oliveira
-
+Turma: 6°B
 Idade: 11 anos
 Data de nascimento: 19/09/2012
 Cidade de nascimento: Bananil, MG
@@ -44,10 +41,9 @@ Contato do pai: (31) 94567-8901
 Nome da mãe: Cremilda Pão-de-ló Oliveira
 Contato da mãe: (31) 96789-0123
 
--------------------------------------------------
 
 Nome completo: Florisbela Marmota de Souza
-
+Turma: 6°B
 Idade: 10 anos
 Data de nascimento: 14/05/2013
 Cidade de nascimento: Bananil, MG
@@ -56,10 +52,9 @@ Contato do pai: (31) 92345-6789
 Nome da mãe: Filomena Jujuba de Souza
 Contato da mãe: (31) 95678-1234
 
--------------------------------------------------
 
 Nome completo: Pafúncio Goiabada dos Santos
-
+Turma: 6°B
 Idade: 11 anos
 Data de nascimento: 10/02/2013
 Cidade de nascimento: Bananil, MG

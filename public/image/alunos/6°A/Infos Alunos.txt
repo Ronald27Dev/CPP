@@ -1,5 +1,6 @@
 Nome completo: Juvenal Cabeção de Melo
 
+Turma:6°A
 Idade: 11 anos
 Data de nascimento: 12/04/2013
 Cidade de nascimento: Bananil, MG
@@ -10,6 +11,7 @@ Contato da mãe: (31) 93456-7890
 
 Nome completo: Tadeu Bolacha Quebrada
 
+Turma:6°A
 Idade: 11 anos
 Data de nascimento: 05/02/2013
 Cidade de nascimento: Bananil, MG
@@ -21,6 +23,7 @@ Contato da mãe: (31) 97890-3456
 
 Nome completo: Pérola Fofoca de Sousa
 
+Turma:6°A
 Idade: 10 anos
 Data de nascimento: 30/10/2013
 Cidade de nascimento: Bananil, MG
@@ -32,6 +35,7 @@ Contato da mãe: (31) 90123-4567
 
 Nome completo: Zeca Pipoca Farofa
 
+Turma:6°A
 Idade: 11 anos
 Data de nascimento: 14/08/2013
 Cidade de nascimento: Bananil, MG
@@ -44,6 +48,7 @@ Contato da mãe: (31) 92345-6789
 
 Nome completo: Lorde Batatinha Engomado
 
+Turma:6°A
 Idade: 3 anos (idade canina)
 Data de nascimento: 01/01/2021
 Cidade de nascimento: Bananil, MG
@@ -55,6 +60,7 @@ Contato da mãe (tutora): (31) 95678-2345
 
 Nome completo: Mini Vegetti da Silva
 
+Turma:6°A
 Idade: 99 anos
 Data de nascimento: 25/12/1924
 Cidade de nascimento: Bananil, MG

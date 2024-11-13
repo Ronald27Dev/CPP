@@ -1,5 +1,5 @@
 Nome completo: Barbudo Mirim da Silva
-
+Turma: 6°C
 Idade: 12 anos
 Data de nascimento: 15/07/2012
 Cidade de nascimento: Bananil, MG
@@ -8,10 +8,9 @@ Contato do pai: (31) 91234-5678
 Nome da mãe: Dona Barba Longa da Silva
 Contato da mãe: (31) 92345-6789
 
-----------------------------------------
 
 Nome completo: JC Retrô Gonzales
-
+Turma: 6°C
 Idade: 11 anos
 Data de nascimento: 03/03/2013
 Cidade de nascimento: Bananil, MG
@@ -19,11 +18,10 @@ Nome do pai: Don Gonzales Charuto
 Contato do pai: (31) 93456-7890
 Nome da mãe: Lola Estilo Gonzales
 Contato da mãe: (31) 94567-8901
-
------------------------------------------
+-
 
 Nome completo: Totó Orelhudo Leãozinho
-
+Turma: 6°C
 Idade: 2 anos (idade canina)
 Data de nascimento: 10/10/2022
 Cidade de nascimento: Bananil, MG
@@ -32,10 +30,9 @@ Contato do pai: (31) 95678-1234
 Nome da mãe: Dona Amora Doce Leãozinho
 Contato da mãe: (31) 96789-2345
 
-----------------------------------------
 
 Nome completo: Lady Franjinha Almeida
-
+Turma: 6°C
 Idade: 3 anos (idade canina)
 Data de nascimento: 22/06/2021
 Cidade de nascimento: Bananil, MG
@@ -44,10 +41,9 @@ Contato do pai: (31) 97890-4567
 Nome da mãe: Madame Chiquinha Almeida
 Contato da mãe: (31) 98901-2345
 
-----------------------------------------
 
 Nome completo: Senhor Miadinho
-
+Turma: 6°C
 Idade: 4 anos (idade felina)
 Data de nascimento: 01/08/2020
 Cidade de nascimento: Bananil, MG
@@ -56,10 +52,9 @@ Contato do pai: (31) 90123-4567
 Nome da mãe: Senhora Ronron Almeida
 Contato da mãe: (31) 91234-5678
 
-----------------------------------------
 
 Nome completo: Petúnia Balinha de Morango
-
+Turma: 6°C
 Idade: 11 anos
 Data de nascimento: 18/11/2013
 Cidade de nascimento: Bananil, MG

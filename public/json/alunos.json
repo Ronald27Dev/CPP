@@ -1,0 +1,201 @@
+[
+    {
+      "nome_completo": "Juvenal Cabeção de Melo",
+      "turma": "6°A",
+      "idade": "11 anos",
+      "data_nascimento": "12/04/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Aristides Cabeção de Melo",
+      "contato_pai": "(31) 91234-5678",
+      "nome_mae": "Donana Pamonha de Melo",
+      "contato_mae": "(31) 93456-7890"
+    },
+    {
+      "nome_completo": "Gabigol Henrique Arrascaeta",
+      "turma": "6°A",
+      "idade": "11 anos",
+      "data_nascimento": "05/02/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Uno Henrinque Arrascaeta",
+      "contato_pai": "(31) 96789-2345",
+      "nome_mae": "Creuza Farofa Arrascaeta",
+      "contato_mae": "(31) 97890-3456"
+    },
+    {
+      "nome_completo": "Pérola Fofoca de Sousa",
+      "turma": "6°A",
+      "idade": "10 anos",
+      "data_nascimento": "30/10/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Bonifácio Fofoqueiro de Sousa",
+      "contato_pai": "(31) 98901-2345",
+      "nome_mae": "Filomena Xepa de Sousa",
+      "contato_mae": "(31) 90123-4567"
+    },
+    {
+      "nome_completo": "Zeca Pipoca Farofa",
+      "turma": "6°A",
+      "idade": "11 anos",
+      "data_nascimento": "14/08/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Juvenal Farofa",
+      "contato_pai": "(31) 91234-5678",
+      "nome_mae": "Marlene Milho de Farofa",
+      "contato_mae": "(31) 92345-6789"
+    },
+    {
+      "nome_completo": "Lorde Batatinha Engomado",
+      "turma": "6°A",
+      "idade": "3 anos (idade canina)",
+      "data_nascimento": "01/01/2021",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Conde Petisco Engomado",
+      "contato_pai": "(31) 94567-1234",
+      "nome_mae": "Duquesa Ração Gourmet",
+      "contato_mae": "(31) 95678-2345"
+    },
+    {
+      "nome_completo": "Mini Vegetti Sofredor",
+      "turma": "6°A",
+      "idade": "99 anos",
+      "data_nascimento": "25/12/1924",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Grande Vegetti da Silva",
+      "contato_pai": "(31) 91234-5678",
+      "nome_mae": "Flora Legumes da Silva",
+      "contato_mae": "(31) 92345-6789"
+    },
+    {
+      "nome_completo": "Gatolino Nerdowski",
+      "turma": "6°B",
+      "idade": "5 anos",
+      "data_nascimento": "01/04/2019",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Dr. Bigodes Nerdowski",
+      "contato_pai": "(31) 94567-1234",
+      "nome_mae": "Madame Fofura Nerdowski",
+      "contato_mae": "(31) 95678-2345"
+    },
+    {
+      "nome_completo": "Gatolino Descoladovski",
+      "turma": "6°B",
+      "idade": "4 anos",
+      "data_nascimento": "20/06/2020",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "João Caramelo Descolado",
+      "contato_pai": "(31) 97890-4567",
+      "nome_mae": "Fifi do Miado Estiloso",
+      "contato_mae": "(31) 98901-2345"
+    },
+    {
+      "nome_completo": "Creuzolina Pipoca Soares",
+      "turma": "6°B",
+      "idade": "10 anos",
+      "data_nascimento": "27/03/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Jacinto Pipoca Soares",
+      "contato_pai": "(31) 91234-5678",
+      "nome_mae": "Ritinha Pamonha Soares",
+      "contato_mae": "(31) 92345-6789"
+    },
+    {
+      "nome_completo": "Zorildo Rabanada Oliveira",
+      "turma": "6°B",
+      "idade": "11 anos",
+      "data_nascimento": "19/09/2012",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Reginaldo Rabanada Oliveira",
+      "contato_pai": "(31) 94567-8901",
+      "nome_mae": "Cremilda Pão-de-ló Oliveira",
+      "contato_mae": "(31) 96789-0123"
+    },
+    {
+      "nome_completo": "Florisbela Marmota de Souza",
+      "turma": "6°B",
+      "idade": "10 anos",
+      "data_nascimento": "14/05/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Juvenal Marmota de Souza",
+      "contato_pai": "(31) 92345-6789",
+      "nome_mae": "Filomena Jujuba de Souza",
+      "contato_mae": "(31) 95678-1234"
+    },
+    {
+      "nome_completo": "Pafúncio Goiabada dos Santos",
+      "turma": "6°B",
+      "idade": "11 anos",
+      "data_nascimento": "10/02/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Teobaldo Goiabada dos Santos",
+      "contato_pai": "(31) 91234-1234",
+      "nome_mae": "Zuleide Marmelada dos Santos",
+      "contato_mae": "(31) 93456-7890"
+    },
+    {
+      "nome_completo": "Barbudo Mirim da Silva",
+      "turma": "6°C",
+      "idade": "12 anos",
+      "data_nascimento": "15/07/2012",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Seu Barba Forte da Silva",
+      "contato_pai": "(31) 91234-5678",
+      "nome_mae": "Dona Barba Longa da Silva",
+      "contato_mae": "(31) 92345-6789"
+    },
+    {
+      "nome_completo": "JC Retrô Gonzales",
+      "turma": "6°C",
+      "idade": "11 anos",
+      "data_nascimento": "03/03/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Don Gonzales Charuto",
+      "contato_pai": "(31) 93456-7890",
+      "nome_mae": "Lola Estilo Gonzales",
+      "contato_mae": "(31) 94567-8901"
+    },
+    {
+      "nome_completo": "Totó Orelhudo Leãozinho",
+      "turma": "6°C",
+      "idade": "2 anos (idade canina)",
+      "data_nascimento": "10/10/2022",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Seu Felpudo Leãozinho",
+      "contato_pai": "(31) 95678-1234",
+      "nome_mae": "Dona Amora Doce Leãozinho",
+      "contato_mae": "(31) 96789-2345"
+    },
+    {
+      "nome_completo": "Lady Franjinha Almeida",
+      "turma": "6°C",
+      "idade": "3 anos (idade canina)",
+      "data_nascimento": "22/06/2021",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Lorde Peludão Almeida",
+      "contato_pai": "(31) 97890-4567",
+      "nome_mae": "Madame Chiquinha Almeida",
+      "contato_mae": "(31) 98901-2345"
+    },
+    {
+      "nome_completo": "Senhor Miadinho",
+      "turma": "6°C",
+      "idade": "4 anos (idade felina)",
+      "data_nascimento": "01/08/2020",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Bigodes Sênior",
+      "contato_pai": "(31) 90123-4567",
+      "nome_mae": "Senhora Ronron Almeida",
+      "contato_mae": "(31) 91234-5678"
+    },
+    {
+      "nome_completo": "Petúnia Balinha de Morango",
+      "turma": "6°C",
+      "idade": "11 anos",
+      "data_nascimento": "18/11/2013",
+      "cidade_nascimento": "Bananil, MG",
+      "nome_pai": "Dorivaldo Balinha de Morango",
+      "contato_pai": "(31) 93456-7890",
+      "nome_mae": "Azaleia Docinho de Morango",
+      "contato_mae": "(31) 94567-8901"
+    }
+]
+  
