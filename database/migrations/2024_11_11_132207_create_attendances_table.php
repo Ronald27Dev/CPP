@@ -13,12 +13,12 @@ class CreateAttendancesTable extends Migration
     public function up()
     {
         Schema::create('attendances', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('id_student');
             $table->date('date');
             $table->enum('status', ['presente', 'ausente', 'justificado']);
             $table->timestamps();
 
-            // Criação da chave estrangeira para referenciar 'id_student' na tabela 'students'
             $table->foreign('id_student')->references('id_student')->on('students')->onDelete('cascade');
         });
     }

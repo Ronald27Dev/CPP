@@ -92,3 +92,6 @@ Route::post('/attendance/register', [AttendanceController::class, 'registerAtten
 
 // Exibe a lista de presenças registradas
 Route::get('/attendance/list', [AttendanceController::class, 'showAttendanceList'])->name('attendance.list');
+
+Route::post('/attendance/store', [AttendanceController::class, 'store'])->name('attendance.store');
+

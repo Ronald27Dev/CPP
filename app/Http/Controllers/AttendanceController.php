@@ -20,6 +20,11 @@ class AttendanceController extends Controller
         $students = Student::all();
         return view('attendance.register', compact('students'));
     }
+    public function showRegisterForm()
+    {
+        // Retorna a view de registro de presença
+        return view('attendance.register');
+    }
 
     /**
      * Registra a presença de alunos.
