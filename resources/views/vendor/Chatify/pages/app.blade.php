@@ -1,4 +1,7 @@
 @include('Chatify::layouts.headLinks')
+
+<link rel="shortcut icon" href="/image/graduation-cap.svg" type="image/x-icon">
+
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView {{ !!$id ? 'conversation-active' : '' }}">
