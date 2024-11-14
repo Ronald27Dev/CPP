@@ -53,7 +53,7 @@
                 <a href="/professores"><img src="/image/icons/teacher.png"> <span>Professores</span></a>
                 <a href="/calendario"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
                 <a href="/notas"><img src="/image/icons/receipt.png"> <span>Notas</span></a>
-                @if($user['role'] !== 2)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
+                @if($user['role'] !== 3)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
                 <a href="/horario"><img src="/image/icons/clock.png"> <span>Horário</span></a>
                 <a href="/logout"><img src="/image/icons/sign-out-alt.png"> <span>Sair</span></a>
                 @if($user['role'] === 1)<a href="/usuarios"><img src="/image/icons/admin.png"> <span>Administração</span></a>@endif
