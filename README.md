@@ -70,7 +70,23 @@ Siga os passos abaixo para rodar o projeto localmente:
 
     Caso queira adicionar mais usuários ou personalizar os dados gerados, edite o arquivo `database/seeders/DatabaseSeeder.php`.
 
-9. **Inicie o servidor de desenvolvimento**:
+9. **Faça a configuração do Chat**:
+
+    - Acesse o site da Pusher em https://pusher.com/
+    - Cadastre ou faça login
+    - Crie um Channel
+    - Escolha a opção 'Laravel' para o back-end
+    - Copie a App Keys
+    - Cole nesse formato no arquivo ```.env```:
+       
+       ```
+       PUSHER_APP_ID=
+       PUSHER_APP_KEY=
+       PUSHER_APP_SECRET=
+       PUSHER_APP_CLUSTER=
+       ```
+
+10. **Inicie o servidor de desenvolvimento**:
 
     ```bash
     php artisan serve
