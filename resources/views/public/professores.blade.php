@@ -23,7 +23,7 @@
                 <a href="/professores"><img src="/image/icons/teacher.png"> <span>Professores</span></a>
                 <a href="/calendario"><img src="/image/icons/calendar-day.png"> <span>Calendário</span></a>
                 <a href="/notas"><img src="/image/icons/receipt.png"> <span>Notas</span></a>
-                @if($user['role'] !== 2)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
+                @if($user['role'] !== 3)<a href="/frequencia"><img src="/image/icons/time-check.png"> <span>Frequência</span></a>@endif
                 <a href="/horario"><img src="/image/icons/clock.png"> <span>Horário</span></a>
                 <a href="/logout"><img src="/image/icons/sign-out-alt.png"> <span>Sair</span></a>
                 @if($user['role'] === 1)<a href="/usuarios"><img src="/image/icons/admin.png"> <span>Administração</span></a>@endif
@@ -73,7 +73,7 @@
                         <img src="/image/professores/Tonico Goiabinha Almeida.jpg" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Tonico Goiabinha Almeida</h4>
                         <p>Ele/Dele | 42 anos | Sem-Peixe, MG</p>
                     </div>
@@ -96,7 +96,7 @@
                         <img src="/image/professores/Joventino Pão-duro da Silvaaa.png" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Joventino Mito da Silva</h4>
                         <p>Ele/Dele | 49 anos | Buritizeiro, MG</p>
                     </div>
@@ -119,7 +119,7 @@
                         <img src="/image/professores/Raimundo Melado de Oliveira.jpg" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Raimundo Melado de Oliveira</h4>
                         <p>Ele/Dele | 65 anos | Anta Gorda, MG</p>
                     </div>
@@ -142,7 +142,7 @@
                         <img src="/image/professores/Donária Bananada de Souza.jpg" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Donária Bananada de Souza</h4>
                         <p>Ela/Dela | 44 anos | Cabeceira Grande, MG</p>
                     </div>
@@ -165,7 +165,7 @@
                         <img src="/image/professores/Gilmar Pamonha dos Santos.jpg" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Gilmar Pamonha dos Santos</h4>
                         <p>Ele/Dele | 59 anos | Formoso, MG</p>
                     </div>
@@ -188,13 +188,13 @@
                         <img src="/image/professores/Perpétua Bolachinha Carneiro.jpg" alt="Foto de perfil Professores">
                     </div>
     
-                    <div>
+                    <div class="desc-prof">
                         <h4>Perpétua Bolachinha Carneiro</h4>
                         <p>Ela/Dela | 52 anos | Pintópolis, MG</p>
                     </div>
     
                     <div>
-                        <h4>Contato</h5>
+                        <h4>Contato</h4>
                         <p><img src="/image/icons/phone.png">(31) 96789-1234<br>
                         <img src="/image/icons/email.png">perpetua.prof@cpp.edu.br</p>
                     </div>
