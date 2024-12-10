@@ -10,12 +10,12 @@ class Attendance extends Model
     use HasFactory;
 
     protected $fillable = [
-        'student_id', 'date', 'status',
+        'id_student', 'date', 'status',
     ];
 
     // Relacionamento com o aluno
     public function student()
     {
-        return $this->belongsTo(Student::class);
+        return $this->belongsTo(Student::class, 'id_student');
     }
 }

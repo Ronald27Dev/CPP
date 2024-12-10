@@ -21,7 +21,7 @@ class AuthController extends Controller
     /**
      * Metodo de view do formulario de login
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function loginForm() {
         return view('login/login');
@@ -65,7 +65,7 @@ class AuthController extends Controller
     /**
      * Metodo que exibe o formulário para "Esqueceu a Senha"
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function forgotPasswordForm() {
         return view('login/forgot');
@@ -104,7 +104,7 @@ class AuthController extends Controller
      * @param string $token é o token gerado no banco de dados
      * @param string $email é o email para que o token foi gerado
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function showResetPasswordForm($token, $email) {
         return view('login/atualiza-senha', compact('token', 'email'));

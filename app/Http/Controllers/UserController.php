@@ -134,9 +134,9 @@ class UserController extends Controller
 
         try {
             $update_data = [
-                'name' => $request->full_name,
-                'email' => $request->email,
-                'phone_number' => $request->phone_number,
+                'name'          => $request->full_name,
+                'email'         => $request->email,
+                'phone_number'  => $request->phone_number,
             ];
 
             //Checa se a senha tambem sera atualizada

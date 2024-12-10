@@ -92,7 +92,7 @@ class NotaController extends Controller
     /**
      * View com a lista das notas do aluno
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function listAll() {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
@@ -112,7 +112,7 @@ class NotaController extends Controller
     /**
      * Formulario para cadastrar notas dos alunos
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function formAddNote() {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');

@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\SchoolClass;
 use App\Models\Student;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class StudentController extends Controller
@@ -19,16 +19,44 @@ class StudentController extends Controller
      * 
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function addStudent(Request $request)
-    {
+    public function addStudent(Request $request) {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
 
         $request->validate([
             'name'      => 'required|string|max:255',
-            'birthdate'  => 'required|date',
+            'birthdate' => 'required|date',
             'parent_id' => 'required|exists:users,id', 
             'id_class'  => 'required|exists:classes,id_class',
+            'image'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+
+            $image = $request->file('image');
+            $imageName = $request->name . '.jpg';
+            
+            $class = SchoolClass::where('id_class', $request->id_class());
+
+            $img = imagecreatefromstring(file_get_contents($image));
+    
+            if (!$img) {
+                return redirect('/alunos')->with('fail', 'Imagem inválida.');
+            }
+    
+            $width = imagesx($img);
+            $height = imagesy($img);
+    
+            $newWidth = 300;
+            $newHeight = ($height / $width) * $newWidth;
+            $resizedImg = imagescale($img, $newWidth, $newHeight);
+    
+            $path = public_path('image/alunos/'. $class->classname() . $imageName);
+            imagejpeg($resizedImg, $path, 75);
+    
+            imagedestroy($img);
+            imagedestroy($resizedImg);
+        }
+
         $student = Student::create($request->all());
 
         return redirect('/alunos')->with('success', 'Aluno cadastrado com sucesso!');
@@ -41,8 +69,7 @@ class StudentController extends Controller
      * 
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function updateStudent(Request $request)
-    {
+    public function updateStudent(Request $request) {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
 
         $request->validate([
@@ -70,8 +97,7 @@ class StudentController extends Controller
      * 
      * @return \Illuminate\Http\RedirctResponse
      */
-    public function deleteStudent($id)
-    {
+    public function deleteStudent($id) {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
         
         Student::where('id_student', $id)->delete();
@@ -83,28 +109,41 @@ class StudentController extends Controller
     /**
      * View com a lista de Alunos
      * 
-     * @return view
+     * @param \Illuminate\Http\Request
+     * 
+     * @return \Illuminate\View\View
      */
-    public function listAll() {
-        if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
-        else {
-            $students = DB::table('students')
-                ->join('classes', 'students.id_class', '=', 'classes.id_class')
-                ->join('users as teacher', 'classes.id_teacher', '=', 'teacher.id')
-                ->join('users as parents', 'parents.id', '=', 'students.parent_id')
-                ->select('students.*', 'classes.classname', 'parents.name as parentName', 'teacher.name as teacherName', 'classes.classname')
-                ->get();
+    public function listAll(Request $request) {
 
-            $currentUser = Auth::user();
+        if (!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
+        
+        $search = $request->input('search');
 
-            return view('alunos/alunos', compact('students', 'currentUser'));
+        $studentsQuery = DB::table('students')
+            ->join('classes', 'students.id_class', '=', 'classes.id_class')
+            ->join('users as teacher', 'classes.id_teacher', '=', 'teacher.id')
+            ->join('users as parents', 'parents.id', '=', 'students.parent_id')
+            ->select('students.*', 'classes.classname', 'parents.name as parentName', 'teacher.name as teacherName', 'classes.classname')
+        ;
+
+        if ($search) {
+            $studentsQuery->where('students.name', 'like', '%' . $search . '%')
+                ->orWhere('teacher.name', 'like', '%' . $search . '%')
+                ->orWhere('classes.classname', 'like', '%' . $search . '%')
+                ->orWhere('parents.name', 'like', '%' . $search . '%')
+            ;
         }
+
+        $students = $studentsQuery->paginate(10);
+
+        $currentUser = Auth::user();
+        return view('alunos/alunos', compact('students', 'currentUser'));
     }
 
     /**
      * Formulario para cadastrar usuarios
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function formAddStudent() {
         if(!Auth::check()) return redirect('/login')->with('fail', 'É preciso estar logado!');
@@ -121,7 +160,7 @@ class StudentController extends Controller
      * 
      * @param int $id_student
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function formUpdateStudent ($id_student) {
 

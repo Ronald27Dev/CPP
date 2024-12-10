@@ -56,6 +56,14 @@
                 <span class="alert alert-danger p-2">{{Session::get('fail')}}</span>
             @endif
             <div class="card-body">
+
+                <form method="GET" action="{{ url('/alunos') }}">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="search" value="{{ request()->input('search') }}" placeholder="Buscar Aluno">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </form>
+
                 <div class="table-responsive">
                     <table class="table table-sn table-striped table-bordered">
                         <thead>
@@ -89,6 +97,34 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        @if ($students->onFirstPage())
+                            <li class="page-item disabled">
+                                <span class="page-link">Anterior</span>
+                            </li>
+                        @else
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $students->previousPageUrl() }}">Anterior</a>
+                            </li>
+                        @endif
+                        
+                        @foreach ($students->getUrlRange(1, $students->lastPage()) as $page => $url)
+                            <li class="page-item {{ $page == $students->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                            </li>
+                        @endforeach
+                
+                        @if ($students->hasMorePages())
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $students->nextPageUrl() }}">Proximo</a>
+                            </li>
+                        @else
+                            <li class="page-item disabled">
+                                <span class="page-link">Proximo</span>
+                            </li>
+                        @endif
+                    </ul>
             </div>
         </div>
     </div>

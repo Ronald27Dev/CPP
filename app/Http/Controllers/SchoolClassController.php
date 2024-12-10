@@ -13,7 +13,7 @@ class SchoolClassController extends Controller
     /**
      * View que lista as classes
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function listAll() {
         
@@ -29,7 +29,7 @@ class SchoolClassController extends Controller
      * 
      * @var User $teacher
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function createClass() {
         
@@ -75,7 +75,7 @@ class SchoolClassController extends Controller
      * 
      * @param int $idturma
      * 
-     * @return view
+     * @return \Illuminate\View\View
      */
     public function updateClassForm(int $idturma) {
 

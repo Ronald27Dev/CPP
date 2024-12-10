@@ -19,7 +19,7 @@
             @endif
             <div class="card-body">
                 <div class="mb3">
-                    <form id="userForm" action="{{route('adiciona-aluno')}}" method="post">
+                    <form id="userForm" action="{{route('adiciona-aluno')}}" method="post" enctype="multipart/form-data">
                         @csrf 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nome Completo do Aluno</label>
@@ -61,6 +61,14 @@
                             @enderror
                         </div>
                         
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Foto do Aluno</label>
+                            <input type="file" class="form-control" name="image" id="image" accept="image/*">
+                        
+                            @error('image')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
                         <button type="button" class="btn btn-primary" id="submitBtn">Cadastrar</button>&nbsp;&nbsp;&nbsp;
                         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#returnModal">Cancelar</button> 
                     </form>
